@@ -1,0 +1,105 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: sans-serif;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+.container1,
+.container2 {
+  max-width: 50rem;
+  margin: 0 auto;
+}
+
+header {
+
+  & nav {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem;
+
+    & a {
+      text-transform: capitalize;
+      text-decoration: none;
+    }
+  }
+}
+
+.hero-section {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 70vh;
+  min-height: 70dvh;
+
+  & h1 {
+    font-size: clamp(2.5rem, 5.7vw + 1.4rem, 5rem);
+  }
+
+  & h2,
+  h3,
+  h4,
+  h5 {
+    position: absolute;
+    color: hsla(21, 100%, 50%, 0.7);
+  }
+
+  & h2 {
+    font-size: clamp(2rem, 5.7vw + 1.4rem, 3rem);
+    top: 10vmin;
+    left: 7vmin;
+  }
+
+  & h3 {
+    font-size: clamp(1.7rem, 5.7vw + 1.4rem, 2rem);
+    right: 5vmin;
+    top: 25vmin;
+  }
+
+  & h4 {
+    font-size: clamp(1rem, 5.7vw + 1.4rem, 1.5rem);
+    left: 10vmin;
+    bottom: 4vmin;
+  }
+
+  & h5 {
+    font-size: clamp(0.8rem, 5.7vw + 1.4rem, 1rem);
+    right: 20vmin;
+    bottom: 20vmin;
+  }
+}
+
+.divider {
+  position: relative;
+  z-index: 900;
+  display: flex;
+  flex-flow: column nowrap;
+
+  & .wave-shadow {
+    display: none;
+    /* for now */
+    /* fill with transparency */
+    /* a mini parallex effect */
+  }
+
+  & .rectangles {
+    /* margin-block-start: -0.3rem; */
+  }
+}
+
+article {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 3rem;
+}
